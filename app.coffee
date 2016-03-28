@@ -22,6 +22,7 @@ module.exports =
 
   extensions: [
     records(
+      offers: { file: "data/offers.json" }
       characters: { file: "data/characters.json" }
       site: { file: "data/site.json" }
     ),

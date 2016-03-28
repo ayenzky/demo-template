@@ -4,7 +4,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Content Manager
-  
+
     link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
     link(rel="stylesheet", href="/css/skel.css")
     link(rel="stylesheet", href="/css/style.css")
@@ -39,20 +39,20 @@ html
         </div>
       </div>
 
-    script(type="text/x-handlebars" data-template-name='cms/preview/characters').
+    script(type="text/x-handlebars" data-template-name='cms/preview/offers').
       <div id="main-wrapper">
         <div class="container">
-          {{#cms-preview field="data" as |character| }}
+          {{#cms-preview field="data" as |offer| }}
             <section class="box">
-              <span class="image featured">{{cms-preview field="image" from=character}}</span>
+              <span class="image featured">{{cms-preview field="image" from=offer}}</span>
               <header>
-                <h3>{{character.name}}</h3>
+                <h3>{{offer.name}}</h3>
               </header>
-              <p>{{character.description}}</p>
+              <p>{{offer.description}}</p>
             </section>
           {{/cms-preview}}
         </div>
       </div>
-  
+
     script(src="//cms.netlify.com/assets/vendor.js")
     script(src="//cms.netlify.com/assets/cms.js")
