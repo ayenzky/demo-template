@@ -125,8 +125,8 @@ block content
 			div.row
 				- each ourteam in records.ourteams.data
 					div.col-lg-4.col-md-6.text-center
-						div.team-box.text-center.wow.fadeInUp(data-wow-delay= ourteam.animatedelay)
-								img(src= ourteam.image,  class="img-responsive")
+						div.team-box.text-center.wow.fadeInUp(data-wow-delay=".1s")
+								img(src= ourteam.image,  class="img-responsive wow fadeIn", data-wow-delay=".3s")
 								h4= ourteam.name
 								p
 									strong= ourteam.role
