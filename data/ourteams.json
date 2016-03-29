@@ -1,0 +1,24 @@
+{
+ "result": [
+{
+  "image": "/img/john.jpg",
+  "name": "John Doe",
+  "role": "APPz Architect",
+  "description": "Our templates are updated regularly so they don't break."
+},
+{
+  "image": "/img/karoline.jpg",
+  "name": "Karoline Dee",
+  "position": "Creative Manager",
+  "description": "You can use this theme as is, or you can make changes!"
+},
+{
+  "image": "/img/john.jpg",
+  "name": "Zack Woo",
+  "position": "User Advocate",
+  "description": "We update dependencies to keep things fresh."
+
+}
+
+]
+}

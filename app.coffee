@@ -23,7 +23,7 @@ module.exports =
   extensions: [
     records(
       offers: { file: "data/offers.json" }
-      characters: { file: "data/characters.json" }
+      ourteams: { file: "data/ourteams.json" }
       site: { file: "data/site.json" }
     ),
     collections(folder: 'posts', layout: 'post'),

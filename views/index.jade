@@ -123,6 +123,15 @@ block content
 
 		div.container
 			div.row
+				- each ourteam in records.ourteams.result
+					div.col-lg-4.col-md-6.text-center
+						div.team-box.text-center.wow.fadeInUp
+								img(src= ourteam.image,  class="img-responsive")
+								h4= ourteam.name
+								p
+									strong= ourteam.position
+								p.text-muted= ourteam.description
+
 				div.col-lg-4.col-md-6.text-center
 					div.team-box.text-center.wow.fadeInUp(data-wow-delay=".1s")
 							img(src="img/john.jpg", class="img-responsive", alt="")
