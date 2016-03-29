@@ -54,5 +54,27 @@ html
         </div>
       </div>
 
+    script(type="text/x-handlebars" data-template-name='cms/preview/ourteams').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |ourteam| }}
+            <section class="box">
+              <span class="image featured">{{cms-preview field="image" from=ourteam}}</span>
+              <header>
+                <h3>{{ourteam.name}}</h3>
+              </header>
+              <p>{{ourteam.role}}</p>
+              <p>{{ourteam.description}}</p>
+              <p>{{ourteam.animatedelay}}</p>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+    script(type="text/x-handlebars" data-template-name='components/widgets/authors-control').
+      <div class="form-group">
+        <label>{{widget.label}}</label>
+        {{view "select" content=widget.field.authors value=widget.value}}
+      </div>
+
     script(src="//cms.netlify.com/assets/vendor.js")
     script(src="//cms.netlify.com/assets/cms.js")

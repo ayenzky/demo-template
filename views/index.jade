@@ -123,39 +123,39 @@ block content
 
 		div.container
 			div.row
-				- each ourteam in records.ourteams.result
+				- each ourteam in records.ourteams.data
 					div.col-lg-4.col-md-6.text-center
-						div.team-box.text-center.wow.fadeInUp
+						div.team-box.text-center.wow.fadeInUp(data-wow-delay= ourteam.animatedelay)
 								img(src= ourteam.image,  class="img-responsive")
 								h4= ourteam.name
 								p
-									strong= ourteam.position
+									strong= ourteam.role
 								p.text-muted= ourteam.description
 
-				div.col-lg-4.col-md-6.text-center
-					div.team-box.text-center.wow.fadeInUp(data-wow-delay=".1s")
-							img(src="img/john.jpg", class="img-responsive", alt="")
-							h4 John Doe
-							p
-								strong APPz Architect
-							p.text-muted Our templates are updated regularly so they don't break.
+				//- div.col-lg-4.col-md-6.text-center
+				//- 	div.team-box.text-center.wow.fadeInUp(data-wow-delay=".1s")
+				//- 			img(src="img/john.jpg", class="img-responsive", alt="")
+				//- 			h4 John Doe
+				//- 			p
+				//- 				strong APPz Architect
+				//- 			p.text-muted Our templates are updated regularly so they don't break.
 
 
-				div.col-lg-4.col-md-6.text-center
-					div.team-box.text-center.wow.fadeInUp(data-wow-delay=".2s")
-							img(src="img/karoline.jpg", class="img-responsive", alt="", data-wow-delay=".1s")
-							h4 Karoline Dee
-							p
-								strong Creative Manager
-							p.text-muted You can use this theme as is, or you can make changes!
+				//- div.col-lg-4.col-md-6.text-center
+				//- 	div.team-box.text-center.wow.fadeInUp(data-wow-delay=".2s")
+				//- 			img(src="img/karoline.jpg", class="img-responsive", alt="", data-wow-delay=".1s")
+				//- 			h4 Karoline Dee
+				//- 			p
+				//- 				strong Creative Manager
+				//- 			p.text-muted You can use this theme as is, or you can make changes!
 
-				div.col-lg-4.col-md-6.text-center
-					div.team-box.text-center.wow.fadeInUp(data-wow-delay=".3s")
-							img(src="img/zack.jpg", class="img-responsive", alt="", data-wow-delay=".2s")
-							h4 Zack Woo
-							p
-								strong User Advocate
-							p.text-muted We update dependencies to keep things fresh.
+				//- div.col-lg-4.col-md-6.text-center
+				//- 	div.team-box.text-center.wow.fadeInUp(data-wow-delay=".3s")
+				//- 			img(src="img/zack.jpg", class="img-responsive", alt="", data-wow-delay=".2s")
+				//- 			h4 Zack Woo
+				//- 			p
+				//- 				strong User Advocate
+				//- 			p.text-muted We update dependencies to keep things fresh.
 
 	section#our-prices
 		div.container
