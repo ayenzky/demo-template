@@ -27,6 +27,16 @@ collections: # A list of collections the CMS should be able to edit
   - name: "data"
     label: "Sections"
     files:
+      - name: "sliders"
+        label: "Image Slider"
+        file: "data/slider.json"
+        fields:
+          - label: "Image Slider"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Image Name", name: "alt", widget: "string"}
       - name: "offers"
         label: "Services"
         file: "data/offers.json"
@@ -73,5 +83,5 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
-              - {label: "Contents", name: "contents", widget: "markdown"}
+              - {label: "Content", name: "contents", widget: "markdown"}
 

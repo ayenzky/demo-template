@@ -33,20 +33,22 @@
 
 section#contact
   div.container
-    div.row
-      div.col-lg-8.col-lg-offset-2.text-center
-        h2.section-heading Let's Get In Touch!
-        hr.primary
-        p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
+    - each contacts in records.contact.data
+      div.row
+        div.col-lg-8.col-lg-offset-2.text-center
+          h2.section-heading= contacts.title
+          hr.primary
+          p= contacts.description
+        != contacts.contents
 
-      div.col-lg-4.col-lg-offset-2.text-center
-        i.fa.fa-phone.fa-3x.wow.bounceIn
-        p 123-456-6789
+        //- div.col-lg-4.col-lg-offset-2.text-center
+        //-   i.fa.fa-phone.fa-3x.wow.bounceIn
+        //-   p 123-456-6789
 
-      div.col-lg-4.text-center
-        i(class="fa fa-envelope-o fa-3x wow bounceIn", data-wow-delay=".1s")
-        p
-          a(href="mailto:info@webriq.com") info@webriq.com
+        //- div.col-lg-4.text-center
+        //-   i(class="fa fa-envelope-o fa-3x wow bounceIn", data-wow-delay=".1s")
+        //-   p
+        //-     a(href="mailto:info@webriq.com") info@webriq.com
 
   != js()
   <!-- jQuery -->

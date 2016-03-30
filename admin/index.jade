@@ -39,6 +39,18 @@ html
         </div>
       </div>
 
+    script(type="text/x-handlebars" data-template-name='cms/preview/sliders').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |slider| }}
+            <section class="box">
+              <span class="image featured">{{cms-preview field="image" from=slider}}</span>
+              <p>{{slider.alt}}</p>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+
     script(type="text/x-handlebars" data-template-name='cms/preview/offers').
       <div id="main-wrapper">
         <div class="container">
@@ -75,7 +87,6 @@ html
         <div class="container">
           {{#cms-preview field="data" as |price| }}
             <section class="box">
-              <span class="image featured">{{cms-preview field="image" from=price}}</span>
               <header>
                 <h3>{{price.name}}</h3>
               </header>
@@ -96,9 +107,8 @@ html
         <div class="container">
           {{#cms-preview field="data" as |contact| }}
             <section class="box">
-              <span class="image featured">{{cms-preview field="image" from=contact}}</span>
               <header>
-                <h3>{{contact.name}}</h3>
+                <h3>{{contact.title}}</h3>
               </header>
               <p>{{contact.description}}</p>
               <code>{{contact.contents}}</code>
