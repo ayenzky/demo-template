@@ -56,9 +56,9 @@ html
         <div class="container">
           {{#cms-preview field="data" as |getstarted| }}
             <section class="box">
-              <p>{{getstarted.title}}</p>
+              <h2>{{getstarted.title}}</h2>
               <p>{{getstarted.description}}</p>
-              <p>{{getstarted.anchorlink}}</p>
+              {{cms-preview field="anchorlink" from=getstarted}}
             </section>
           {{/cms-preview}}
         </div>
@@ -104,11 +104,12 @@ html
                 <h3>{{price.name}}</h3>
               </header>
               <p>{{price.description}}</p>
-              <code>{{price.cols1}}</code>
+              {{cms-preview field="cols1" from=price}}
               <br/>
-              <code>{{price.cols2}}</code>
+              {{cms-preview field="cols2" from=price}}
               <br/>
-              <code>{{price.cols3}}</code>
+              {{cms-preview field="cols3" from=price}}
+
 
             </section>
           {{/cms-preview}}
@@ -124,7 +125,7 @@ html
                 <h3>{{contact.title}}</h3>
               </header>
               <p>{{contact.description}}</p>
-              <code>{{contact.contents}}</code>
+              {{cms-preview field="contents" from=contact}}
             </section>
           {{/cms-preview}}
         </div>

@@ -1,1 +1,12 @@
-{"data":[]}
+{
+  "data": [
+    {
+      "image": "img/header.jpg",
+      "imagename": "image-1"
+    },
+    {
+      "image": "img/header-2.jpg",
+      "imagename": "image-2"
+    }
+  ]
+}

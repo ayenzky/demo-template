@@ -29,6 +29,7 @@ module.exports =
       getstarted: { file: "data/getstarted.json" }
       site: { file: "data/site.json" }
       slider: { file: "data/slider.json" }
+      slidertext: { file: "data/slidertext.json" }
     ),
     collections(folder: 'posts', layout: 'post'),
     js_pipeline(files: 'assets/js/*.coffee'),
