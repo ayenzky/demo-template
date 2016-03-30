@@ -27,9 +27,11 @@ module.exports =
       prices: { file: "data/prices.json" }
       contact: { file: "data/contact.json" }
       getstarted: { file: "data/getstarted.json" }
+      menu: { file: "data/menu.json" }
       site: { file: "data/site.json" }
       slider: { file: "data/slider.json" }
       slidertext: { file: "data/slidertext.json" }
+      statusbar: { file: "data/statusbar.json" }
     ),
     collections(folder: 'posts', layout: 'post'),
     js_pipeline(files: 'assets/js/*.coffee'),
