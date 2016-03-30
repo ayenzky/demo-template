@@ -59,8 +59,19 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Price", name: "price", widget: "string"}
-              - {label: "Type", name: "type", widget: "string"}
-              - {label: "Html", name: "html", widget: "markdown"}
-
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Cols-1", name: "cols1", widget: "markdown"}
+              - {label: "Cols-2", name: "cols2", widget: "markdown"}
+              - {label: "Cols-3", name: "cols3", widget: "markdown"}
+      - name: "contacts"
+        label: "Contact Us"
+        file: "data/contact.json"
+        fields:
+          - label: "Contact Us"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Content", name: "html", widget: "markdown"}
 

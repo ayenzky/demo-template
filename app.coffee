@@ -25,6 +25,7 @@ module.exports =
       offers: { file: "data/offers.json" }
       ourteams: { file: "data/ourteams.json" }
       prices: { file: "data/prices.json" }
+      contacts: { file: "data/contact.json" }
       site: { file: "data/site.json" }
     ),
     collections(folder: 'posts', layout: 'post'),

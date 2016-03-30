@@ -79,9 +79,29 @@ html
               <header>
                 <h3>{{price.name}}</h3>
               </header>
-              <p>{{price.price}}</p>
-              <p>{{price.type}}</p>
-              <p>{{price.html}}</p>
+              <p>{{price.description}}</p>
+              <code>{{price.cols1}}</code>
+              <br/>
+              <code>{{price.cols2}}</code>
+              <br/>
+              <code>{{price.cols3}}</code>
+
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+
+    script(type="text/x-handlebars" data-template-name='cms/preview/contacts').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |contact| }}
+            <section class="box">
+              <span class="image featured">{{cms-preview field="image" from=contact}}</span>
+              <header>
+                <h3>{{contact.name}}</h3>
+              </header>
+              <p>{{contact.description}}</p>
+              <code>{{contact.html}}</code>
             </section>
           {{/cms-preview}}
         </div>
