@@ -1,9 +1,1 @@
-{
-  "data": [
-    {
-      "text": "CREATE A SIMPLE LANDING PAGE DESIGN",
-      "description": "WebriQ can help you build better websites using the Bootstrap CSS framework!",
-      "anchorlink": "test"
-    }
-  ]
-}
+{"data":[{"html":"<div class=\"container\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" class=\"navbar-toggle collapsed\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><a href=\"#page-top\" class=\"navbar-brand page-scroll\">Logo</a>\n  </div>\n  <div id=\"bs-example-navbar-collapse-1\" class=\"collapse navbar-collapse\">\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li><a href=\"#page-top\" class=\"page-scroll\">Home</a></li>\n      <li><a href=\"#about\" class=\"page-scroll\">About</a></li>\n      <li><a href=\"#services\" class=\"page-scroll\">Services</a></li>\n      <li><a href=\"#our-team\" class=\"page-scroll\">Our Team</a></li>\n      <li><a href=\"#our-prices\" class=\"page-scroll\">Pricing</a></li>\n      <li><a href=\"#contact\" class=\"page-scroll\">Contact</a></li>\n    </ul>\n  </div>\n</div>"}]}
