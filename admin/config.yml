@@ -37,6 +37,17 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
               - {label: "Image Name", name: "alt", widget: "string"}
+      - name: "getstarteds"
+        label: "Get Started"
+        file: "data/getstarted.json"
+        fields:
+          - label: "Get Started"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Anchor Link", name: "anchorlink", widget: "markdown"}
       - name: "offers"
         label: "Services"
         file: "data/offers.json"

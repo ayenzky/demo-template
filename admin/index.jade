@@ -51,6 +51,19 @@ html
         </div>
       </div>
 
+    script(type="text/x-handlebars" data-template-name='cms/preview/getstarteds').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |getstarted| }}
+            <section class="box">
+              <p>{{getstarted.title}}</p>
+              <p>{{getstarted.description}}</p>
+              <p>{{getstarted.anchorlink}}</p>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+
     script(type="text/x-handlebars" data-template-name='cms/preview/offers').
       <div id="main-wrapper">
         <div class="container">

@@ -26,6 +26,7 @@ module.exports =
       ourteams: { file: "data/ourteams.json" }
       prices: { file: "data/prices.json" }
       contact: { file: "data/contact.json" }
+      getstarted: { file: "data/getstarted.json" }
       site: { file: "data/site.json" }
       slider: { file: "data/slider.json" }
     ),
