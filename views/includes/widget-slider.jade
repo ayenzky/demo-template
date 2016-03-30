@@ -1,15 +1,16 @@
 header
-	div.header-content
-		div.header-content-inner
-			h1 Create A Simple Landing Page Design
-			hr
-			p WebriQ can help you build better websites using the Bootstrap CSS framework!
-			a(href="#about", class="btn btn-primary btn-xl page-scroll") Find Out More
+	- each slidertxts in records.slidertext.data
+		div.header-content
+			div.header-content-inner
+				h1= slidertxts.text
+				hr
+				p= slidertxts.description
+				!= slidertxts.anchorlink
 
 ul#cbp-bislideshow.cbp-bislideshow
 	- each sliders in records.slider.data
 		li
-			img(src= sliders.image, alt= sliders.alt)
+			img(src= sliders.image, alt= sliders.imagename)
 
 div#cbp-bicontrols.cbp-bicontrols
 	span.cbp-biprev

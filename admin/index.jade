@@ -39,13 +39,27 @@ html
         </div>
       </div>
 
+    script(type="text/x-handlebars" data-template-name='cms/preview/slidertexts').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |slidertext| }}
+            <section class="box">
+              <h1>{{slidertext.text}}</h1>
+              <p>{{slidertext.description}}</p>
+              {{cms-preview field="anchorlink" from=slidertext}}
+
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
+
     script(type="text/x-handlebars" data-template-name='cms/preview/sliders').
       <div id="main-wrapper">
         <div class="container">
           {{#cms-preview field="data" as |slider| }}
             <section class="box">
               <span class="image featured">{{cms-preview field="image" from=slider}}</span>
-              <p>{{slider.alt}}</p>
+              <p>{{slider.imagename}}</p>
             </section>
           {{/cms-preview}}
         </div>

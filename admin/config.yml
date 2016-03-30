@@ -47,7 +47,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
-              - {label: "Image Name", name: "alt", widget: "string"}
+              - {label: "Image Name", name: "imagename", widget: "string"}
       - name: "getstarteds"
         label: "Get Started"
         file: "data/getstarted.json"
@@ -70,6 +70,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
               - {label: "Description", name: "description", widget: "string"}
+      - name: "statusbar"
+        label: "Status Counter"
+        file: "data/statusbar.json"
+        fields:
+          - label: "Status Counter"
+            name: "data"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Content", name: "contents", widget: "markdown"}
       - name: "ourteams"
         label: "Our Team"
         file: "data/ourteams.json"
@@ -106,4 +117,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
               - {label: "Content", name: "contents", widget: "markdown"}
-
+      - name: "data"
+        label: "Menu"
+        files:
+          - name: "contacts"
+            label: "Contact Us"
+            file: "data/menu.json"
+            fields:
+              - label: "Contact Us"
+                name: "data"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Content", name: "contents", widget: "markdown"}
