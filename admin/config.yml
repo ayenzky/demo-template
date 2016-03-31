@@ -24,27 +24,29 @@ collections: # A list of collections the CMS should be able to edit
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Categories", name: "categories", widget: "string"}
-  - name: "data"
+  - name: "result"
     label: "Menu"
     files:
       - name: "menuheader"
         label: "Menu"
         file: "data/menu.json"
+        description: "Here you can edit your menu items"
         fields:
-          - label: "Menu"
+          - name: "result"
+            label: "Menu"
             widget: "list"
-            name: "data"
             fields:
               - {label: "Content", name: "html", widget: "markdown"}
-  - name: "data"
-    label: "Sections"
+  - name: "slides"
+    label: "Slider"
     files:
       - name: "slidertexts"
         label: "Slider Text"
         file: "data/slidertext.json"
+        description: "Edit the text on image slider"
         fields:
-          - label: "Slider Text"
-            name: "data"
+          - name: "slides"
+            label: "Slider Text"
             widget: "list"
             fields:
               - {label: "Text", name: "text", widget: "string"}
@@ -53,16 +55,21 @@ collections: # A list of collections the CMS should be able to edit
       - name: "sliders"
         label: "Image Slider"
         file: "data/slider.json"
+        description: "Change or add images for slider"
         fields:
-          - label: "Image Slider"
-            name: "data"
+          - name: "slides"
+            label: "Image Slider"
             widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
               - {label: "Image Name", name: "imagename", widget: "string"}
+  - name: "data"
+    label: "Sections"
+    files:
       - name: "getstarteds"
         label: "Get Started"
         file: "data/getstarted.json"
+        description: "You can edit your text here"
         fields:
           - label: "Get Started"
             name: "data"
@@ -74,6 +81,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "offers"
         label: "Services"
         file: "data/offers.json"
+        description: "You can edit your text here"
         fields:
           - label: "Offers"
             name: "data"
@@ -85,6 +93,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "statusbars"
         label: "Status Counter"
         file: "data/statusbar.json"
+        description: "You can edit your text here"
         fields:
           - label: "Status Counter"
             name: "data"
@@ -94,6 +103,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "ourteams"
         label: "Our Team"
         file: "data/ourteams.json"
+        description: "You can edit your text here"
         fields:
           - label: "Our Team"
             name: "data"
@@ -106,6 +116,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "prices"
         label: "Our Prices"
         file: "data/prices.json"
+        description: "You can edit your text here"
         fields:
           - label: "Our Prices"
             name: "data"
@@ -119,6 +130,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "contacts"
         label: "Contact Us"
         file: "data/contact.json"
+        description: "You can edit your text here"
         fields:
           - label: "Contact Us"
             name: "data"

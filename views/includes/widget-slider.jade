@@ -1,5 +1,5 @@
 header
-	- each slidertxts in records.slidertext.data
+	- each slidertxts in records.slidertext.slides
 		div.header-content
 			div.header-content-inner
 				h1= slidertxts.text
@@ -8,7 +8,7 @@ header
 				!= slidertxts.anchorlink
 
 ul#cbp-bislideshow.cbp-bislideshow
-	- each sliders in records.slider.data
+	- each sliders in records.slider.slides
 		li
 			img(src= sliders.image, alt= sliders.imagename)
 
