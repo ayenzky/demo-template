@@ -5,7 +5,7 @@ backend:
 production:
   backend:
     name: github-api
-    repo: ayenzky/roots-cms-example # Path to your Github repository
+    repo: ayenzky/simple-landing-page-netlify-cms # Path to your Github repository
     branch: master # Branch to update (master by default)
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
