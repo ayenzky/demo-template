@@ -1074,11 +1074,11 @@ define('cms/components/cms-markdown-editor', ['exports', 'ember', 'cms/utils/san
     toolbarY: 0,
     toolbarOpen: false,
     shortcuts: {
-      '⌘+b': 'bold',
-      '⌘+i': 'italic',
-      '⌘+l': 'link',
-      '⇧+⌘+z': 'redo',
-      '⌘+z': 'undo'
+      'âŚ+b': 'bold',
+      'âŚ+i': 'italic',
+      'âŚ+l': 'link',
+      'â‡§+âŚ+z': 'redo',
+      'âŚ+z': 'undo'
     },
     _getAbsoluteLinkUrl: function _getAbsoluteLinkUrl() {
       var url = this.get("linkUrl");
@@ -1655,9 +1655,9 @@ define('cms/components/cms-widget', ['exports', 'ember'], function (exports, Emb
 });
 define('cms/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, Component) {
 
-	'use strict';
+  'use strict';
 
-	exports['default'] = Component['default'];
+  exports['default'] = Component['default'];
 
 });
 define('cms/components/widgets/date_control', ['exports', 'ember'], function (exports, Ember) {
@@ -2086,9 +2086,9 @@ define('cms/controllers/application', ['exports', 'ember'], function (exports, E
 });
 define('cms/controllers/array', ['exports', 'ember'], function (exports, Ember) {
 
-	'use strict';
+  'use strict';
 
-	exports['default'] = Ember['default'].Controller;
+  exports['default'] = Ember['default'].Controller;
 
 });
 define('cms/controllers/entry', ['exports', 'ember', 'cms/models/widget'], function (exports, Ember, Widget) {
@@ -2443,9 +2443,9 @@ define('cms/controllers/login', ['exports', 'ember'], function (exports, Ember) 
 });
 define('cms/controllers/object', ['exports', 'ember'], function (exports, Ember) {
 
-	'use strict';
+  'use strict';
 
-	exports['default'] = Ember['default'].Controller;
+  exports['default'] = Ember['default'].Controller;
 
 });
 define('cms/formats/json', ['exports', 'ember'], function (exports, Ember) {
@@ -2461,7 +2461,7 @@ define('cms/formats/json', ['exports', 'ember'], function (exports, Ember) {
       return JSON.stringify(data);
     },
     excerpt: function excerpt() {
-      return "";
+      return "A JSON Document";
     }
   });
 
@@ -3037,10 +3037,10 @@ define('cms/mixins/keyboard_shortcuts', ['exports', 'ember'], function (exports,
   'use strict';
 
   var MODIFIERS = {
-    '⇧': 16, shift: 16,
-    '⌥': 18, alt: 18, option: 18,
-    '⌃': 17, ctrl: 17, control: 17,
-    '⌘': 91, command: 91
+    'â‡§': 16, shift: 16,
+    'âŚĄ': 18, alt: 18, option: 18,
+    'âŚ': 17, ctrl: 17, control: 17,
+    'âŚ': 91, command: 91
   };
 
   /* Lookup table for shortcut definitions */
@@ -3067,7 +3067,7 @@ define('cms/mixins/keyboard_shortcuts', ['exports', 'ember'], function (exports,
     return DEFINITIONS[c] || c.toUpperCase().charCodeAt(0);
   }
 
-  /* Normalize keyCode for ⌘ */
+  /* Normalize keyCode for âŚ */
   function normalize(kc) {
     return kc === 93 || kc === 224 ? 91 : kc;
   }
@@ -3101,12 +3101,12 @@ define('cms/mixins/keyboard_shortcuts', ['exports', 'ember'], function (exports,
     ```javascript
     export default Ember.Component.extend(KeyboardShortcuts, {
       shortcuts: {
-        '⌘+s': 'save'
+        'âŚ+s': 'save'
       },
 
       actions: {
         save: function() {
-          // Gets triggered when the user press ⌘+s from within the component.
+          // Gets triggered when the user press âŚ+s from within the component.
         }
       }
     });
@@ -4045,9 +4045,9 @@ define('cms/routes/authenticated', ['exports', 'cms/routes/cms'], function (expo
 });
 define('cms/routes/cms', ['exports', 'ember'], function (exports, Ember) {
 
-	'use strict';
+  'use strict';
 
-	exports['default'] = Ember['default'].Route.extend({});
+  exports['default'] = Ember['default'].Route.extend({});
 
 });
 define('cms/routes/create', ['exports', 'cms/routes/authenticated', 'cms/models/entry'], function (exports, AuthenticatedRoute, Entry) {
@@ -4182,9 +4182,9 @@ define('cms/routes/index', ['exports', 'cms/routes/authenticated'], function (ex
 });
 define('cms/routes/login', ['exports', 'cms/routes/cms'], function (exports, Route) {
 
-	'use strict';
+  'use strict';
 
-	exports['default'] = Route['default'].extend({});
+  exports['default'] = Route['default'].extend({});
 
 });
 define('cms/services/authstore', ['exports', 'ember'], function (exports, Ember) {
