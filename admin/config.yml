@@ -139,4 +139,16 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
               - {label: "Content", name: "contents", widget: "markdown"}
-
+  - name: "list"
+    label: "Category"
+    files:
+      - name: "list"
+        label: "Category"
+        file: "data/category.json"
+        description: "Edit the text on image slider"
+        fields:
+          - name: "list"
+            label: "Category"
+            widget: "list"
+            fields:
+              - {label: "Category", name: "name", widget: "string"}

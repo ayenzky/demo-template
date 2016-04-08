@@ -161,20 +161,21 @@ html
     //-     </div>
     //-   </div>
 
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/contacts').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |contact| }}
-    //-         <section class="box">
-    //-           <header>
-    //-             <h3>{{contact.title}}</h3>
-    //-           </header>
-    //-           <p>{{contact.description}}</p>
-    //-           {{cms-preview field="contents" from=contact}}
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
+    script(type="text/x-handlebars" data-template-name='cms/preview/category').
+      <div id="main-wrapper">
+        <div class="container">
+          {{#cms-preview field="data" as |categories| }}
+            <section class="box">
+              <select id="Test" name="Test">
+                  <option value="">-- Choose Test --</option>
+                  {{#each values}}
+                      <option {{bindAttr value="id" selected="selected"}}>{{categories.name}}</option>
+                  {{/each}}
+                </select>
+            </section>
+          {{/cms-preview}}
+        </div>
+      </div>
     //- script(src="/js/vendor.js")
     script(src="//cms.netlify.com/assets/vendor.js")
     script(src="//cms.netlify.com/assets/cms.js")

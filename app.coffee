@@ -32,6 +32,7 @@ module.exports =
       slider: { file: "data/slider.json" }
       slidertext: { file: "data/slidertext.json" }
       statusbar: { file: "data/statusbar.json" }
+      category: { file: "data/category.json" }
     ),
     collections(folder: 'posts', layout: 'post'),
     js_pipeline(files: 'assets/js/*.coffee'),
