@@ -1,13 +1,1 @@
-{
-  "list": [
-    {
-      "name": "Technology"
-    },
-    {
-      "name": "Sports"
-    },
-    {
-      "name": "Food"
-    }
-  ]
-}
+{"data":[{"name":"test"}]}
