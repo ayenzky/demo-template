@@ -1,2 +1,16 @@
-- each menus in records.menu.result
-  != menus.html
+.container
+	.navbar-header
+		button.navbar-toggle.collapsed(data-target='#bs-example-navbar-collapse-1', data-toggle='collapse', type='button')
+			span.sr-only Toggle navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		a.navbar-brand.page-scroll(href='#page-top') Logo
+	#bs-example-navbar-collapse-1.collapse.navbar-collapse
+		ul.nav.navbar-nav.navbar-right
+			li
+				a.page-scroll(href='#page-top') Home
+			li
+				a.page-scroll(href='#services') Services
+			li
+				a.page-scroll(href='#contact') Contact

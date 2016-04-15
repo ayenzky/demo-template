@@ -35,12 +35,40 @@ section#contact
   div.container
     - each contacts in records.contact.data
       div.row
-        div.col-lg-8.col-lg-offset-2.text-center
-          h2.section-heading= contacts.title
-          hr.primary
-          p= contacts.description
-        != contacts.contents
 
+
+
+        div.col-lg-5
+          h3 About Us
+          br
+          p We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+
+        div.col-lg-3
+          h3 Quick Links
+          br
+          ul
+            li
+              a(href="#") Home
+            li
+              a(href="#") About Us
+            li
+              a(href="#") Services
+            li
+              a(href="#") Contact
+
+
+        div.col-lg-3
+          h3 Contact Information
+          br
+          ul
+            li
+              a(href="#") Address: This is your location
+            li
+              a(href="#") Phone: (07) 4565 678
+            li
+              a(href="#") Email: info@demosite.com
+            li
+              a(href="#") Website: www.demosite.com
         //- div.col-lg-4.col-lg-offset-2.text-center
         //-   i.fa.fa-phone.fa-3x.wow.bounceIn
         //-   p 123-456-6789

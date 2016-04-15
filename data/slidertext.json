@@ -1,1 +1,9 @@
-{"slides":[{"text":"CREATE A SIMPLE LANDING PAGE DESIGN","description":"WebriQ can help you build better websites using the Bootstrap CSS framework!","anchorlink":"<a href=\"#about\" class=\"btn btn-primary btn-xl page-scroll\">Find Out More</a>"}]}
+{
+  "slides": [
+    {
+      "text": "WebriQ CMS Starter Template",
+      "description": "A modern responsive front-end framework based on Bootstrap CSS framework!",
+      "anchorlink": "/about-us"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ $( document ).ajaxComplete(function() {
 
 	setTimeout(function(){
 		$('.cms-logo').find('a').html('<img src=' + logo + '>');
-	}, 100);   
+	}, 100);
 
 });
+
