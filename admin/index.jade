@@ -161,22 +161,6 @@ html
     //-     </div>
     //-   </div>
 
-    script(type="text/x-handlebars").
-      <div id="main-wrapper">
-        <div class="container">
-          {{#cms-preview field="data" as |categories| }}
-            <select class="people">
-                {{#each}}
-                    <option class="person">
-                        <h1>{{categories.name}}</h1>
-                    </option>
-                    {{/each}}
-
-            </select>
-          {{/cms-preview}}
-        </div>
-      </div>
-
 
 
     script(src="//cms.netlify.com/assets/vendor.js")
