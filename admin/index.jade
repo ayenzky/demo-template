@@ -51,7 +51,7 @@ html
     script(type="text/x-handlebars" data-template-name='cms/preview/result').
           <ul>
           {{#cms-preview field="result" as |results| }}
-            <li><a href="page/{{results.url}}">{{results.item}}</a></li>
+            <li><a href="{{results.url}}">{{results.item}}</a></li>
           {{/cms-preview}}
           </ul>
 
