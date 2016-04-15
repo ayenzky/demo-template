@@ -49,17 +49,12 @@ html
     //-     </div>
     //-   </div>
     script(type="text/x-handlebars" data-template-name='cms/preview/result').
-      <div id="main-wrapper">
-        <div class="container">
+          <ul>
           {{#cms-preview field="result" as |results| }}
-            <section class="box">
-
-            <a href={{results.url}}>{{results.item}}</a>
-
-            </section>
+            <li><a href="page/{{results.url}}">{{results.item}}</a></li>
           {{/cms-preview}}
-        </div>
-      </div>
+          </ul>
+
 
     //- script(type="text/x-handlebars" data-template-name='cms/preview/result').
     //-   <div id="main-wrapper">
