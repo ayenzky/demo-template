@@ -24,6 +24,20 @@ collections: # A list of collections the CMS should be able to edit
   #   meta: # Meta data fields. Just like fields, but without any preview element
   #     - {label: "Publish Date", name: "date", widget: "datetime"}
   #     - {label: "Categories", name: "categories", widget: "string"}
+  - name: "menus"
+    label: "Menu"
+    files:
+      - name: "result"
+        label: "Menu"
+        file: "data/menu.json"
+        description: "add menu"
+        fields:
+          - label: "Menu Item"
+            name: "result"
+            widget: "list"
+            fields:
+              - {label: "Item", name: "item", widget: "string"}
+
   - name: "sitedata"
     label: "Site Information"
     files:
