@@ -30,8 +30,6 @@ collections: # A list of collections the CMS should be able to edit
       - name: "result"
         label: "Menu"
         file: "data/menu.json"
-        folder: "posts"
-        create: false
         description: "add menu"
         fields:
           - label: "Menu Item"
@@ -39,8 +37,17 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Item", name: "item", widget: "string"}
-
-
+              - {label: "Url ex.(page/sample-name)", name: "url", widget: "string"}
+  - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Page"  # Used in the UI, ie.: "New Post"
+    folder: "page" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Categories", name: "categories", widget: "string"}
   - name: "sitedata"
     label: "Site Information"
     files:
