@@ -30,6 +30,8 @@ collections: # A list of collections the CMS should be able to edit
       - name: "result"
         label: "Menu"
         file: "data/menu.json"
+        folder: "posts"
+        create: false
         description: "add menu"
         fields:
           - label: "Menu Item"
@@ -37,6 +39,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Item", name: "item", widget: "string"}
+
 
   - name: "sitedata"
     label: "Site Information"
