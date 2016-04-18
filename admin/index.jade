@@ -10,7 +10,7 @@ html
     link(rel="shortcut icon", href= records.site.sitedata[0].icon, type="img/*")
 
     link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
-    link(rel="stylesheet", href="/css/skel.css")
+    //- link(rel="stylesheet", href="/css/skel.css")
     link(rel="stylesheet", href="/css/style.css")
     link(rel="stylesheet", href="/css/style-desktop.css")
     link(rel="stylesheet", href="/css/webriq-template.css")
@@ -56,19 +56,30 @@ html
           </ul>
 
 
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/result').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |results| }}
-    //-         <section class="box">
-    //-           <h1>{{slidertext.text}}</h1>
-    //-           <p>{{slidertext.description}}</p>
-    //-           {{cms-preview field="anchorlink" from=slidertext}}
+    script(type="text/x-handlebars" data-template-name='cms/preview/sitedata').
+      <div id="main-wrapper">
+        <div class="container">
+            <h1>Website Information</h1>
+            <hr>
+          {{#cms-preview field="sitedata" as |sitedatas| }}
+            <h4>Favicon</h4>
+            <p>{{{cms-preview field="icon" from=sitedatas}}}</p>
+            <h4>Logo</h4>
+            <p>{{cms-preview field="logo" from=sitedatas}}</p>
+            <h4>Website Name</h4>
+            <p>{{sitedatas.sitename}}</p>
+            <h4>Meta Description</h4>
+            <p>{{sitedatas.sitename}}</p>
+            <h4>Meta Author</h4>
+            <p>{{sitedatas.metauthor}}</p>
+            <h4>Meta Keywords</h4>
+            <p>{{sitedatas.metakeyword}}</p>
+            <h4>Copyright Text</h4>
+            <p>{{sitedatas.footer}}</p>
 
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
+          {{/cms-preview}}
+        </div>
+      </div>
 
     //- script(type="text/x-handlebars" data-template-name='cms/preview/sliders').
     //-   <div id="main-wrapper">
