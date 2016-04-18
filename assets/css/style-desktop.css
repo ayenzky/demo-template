@@ -51,7 +51,7 @@
 
 		.box
 		{
-			padding: 2.75em 1.75em 2.75em 1.75em;
+			padding: 0em 1.75em 2.75em 1.75em;
 		}
 
 			.box .image.featured
@@ -162,6 +162,14 @@
 	{
 		padding: 1em 0 4em 0;
 		text-align:center;
+	}
+	#main-wrapper .menu-preview{
+		list-style:none;
+		padding-left:0px;
+	}
+	#main-wrapper article.box{
+		text-align:left;
+		background-color:#f7f7f7;
 	}
 
 	#main-wrapper hr{
