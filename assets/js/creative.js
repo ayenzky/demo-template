@@ -62,7 +62,7 @@
     var currentPage = stripTrailingSlash($(this).attr('href'));
 
     if (activePage == currentPage) {
-      $(this, 'a').addClass('active');
+      $(this, 'li').addClass('active');
     }
   });
 
