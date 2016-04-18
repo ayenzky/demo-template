@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+ * Start Bootstrap - WebriQ Bootstrap Theme
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
@@ -18,11 +18,7 @@
         event.preventDefault();
     });
 
-    // Highlight the top nav as scrolling occurs
-    // $('body').scrollspy({
-    //     target: '.navbar-fixed-top',
-    //     offset: 51
-    // })
+
 
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
@@ -37,12 +33,6 @@
         }
     );
 
-    // Offset for Main Navigation
-    // $('#mainNav').affix({
-    //     offset: {
-    //         top: 100
-    //     }
-    // })
 
     // Initialize WOW.js Scrolling Animations
 
@@ -69,28 +59,4 @@
 
 
 })(jQuery); // End of use strict
-
-$(document).ready(function(){
-
-
-  cbpBGSlideshow.init();
-  // Add parallax effect to background image
-  $('#cbp-bislideshow li').parallax("0%", 0.2);
-
-  $('.olx-carousel').olxCarousel({
-    items:1,
-    lazyLoad:true,
-    loop:true,
-    margin:10,
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-
-  });
-
-
-    $('.stat-number').countTo();
-
-
-
-})
 
