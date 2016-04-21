@@ -9,8 +9,8 @@ Make sure to install the [netlify-git-api](https://github.com/webriq/netlify-git
 Then:
 
 ```bash
-git clone https://github.com/webriq/demo-template
-cd business-static-template
+git clone https://github.com/webriq/starter-template
+cd starter-template
 netlify-git-api users add
 netlify-git-api serve
 ```
