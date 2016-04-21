@@ -44,12 +44,12 @@ section#services
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary
   background-color: blue-darken-1
 
-.navbar-default.affix .navbar-header .navbar-brand, 
+.navbar-default.affix .navbar-header .navbar-brand,
 .navbar-default .nav > li.active>a, .navbar-default .nav>li.active>a:focus,
 .navbar-default.affix .nav > li>a:hover, .navbar-default.affix .nav>li>a:focus:hover,
 .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus,
 .navbar-default .nav > li>a:hover, .navbar-default .nav>li>a:focus:hover
-  color: blue-darken-1
+  color: #fff
 
 #bs-example-navbar-collapse-1 > ul
   margin-top:0px
@@ -75,21 +75,27 @@ hr
   background-color: rgba(38, 178, 241, 0.8)
 
 .navbar-default .navbar-toggle
-  border-color:#212121
+  border-color:#fff
 
-.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover{
   background-color: transparent
 }
 
 .navbar-default .navbar-toggle .icon-bar
-  background-color:#212121
+  background-color:#fff
 
-body.main header 
+body.main header
   min-height: 30%;
   background-image: url(../img/header3.jpg);
   background-position: top;
   background-repeat:no-repeat;
+
+.page header
+  padding: 20px 0px
+  text-align:left
+  color: #222
+  font-weight: 700
 
 body.main .content h2.title
   border-bottom:1px solid #dfdfdf
@@ -100,8 +106,8 @@ body.main .content h2.title
 body.main .content h2.title strong
   color: light-blue
   font-weight:600
- 
-body.main .addthis_sharing_toolbox 
+
+body.main .addthis_sharing_toolbox
   clear:both
 
 
@@ -128,8 +134,22 @@ section#our-prices
   background-color:#f7f7f7
 
 #contact
-  background-color:#222;
+  background-color:#222
   color:#fff;
+  padding:50px 0px
+.footer #copyright
+  padding:0px
+  background-color:#1F1F1F
+
+.footer #copyright p
+  margin:0px
+  color:#555
+  padding:15px 0px
+
+#contact ul
+  margin-left:0px
+  padding-left:10px
+  list-style:none
 
 #contact hr
   border-color:#fff

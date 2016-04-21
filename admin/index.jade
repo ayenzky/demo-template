@@ -3,180 +3,95 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
     title Content Manager
 
-    link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
-    link(rel="stylesheet", href="/css/skel.css")
-    link(rel="stylesheet", href="/css/style.css")
-    link(rel="stylesheet", href="/css/style-desktop.css")
-    link(rel="stylesheet", href="/css/webriq-template.css")
+    link(rel="icon", href= records.site.sitedata[0].icon, type="image/*")
+    link(rel="shortcut icon", href= records.site.sitedata[0].icon, type="img/*")
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css" rel="stylesheet">
 
 
-    style.
-      .container {
-        width: auto;
-        max-width: 1200px;
-      }
-      body.ember-application .cms-list-entry,
-      body.ember-application .cms-preview-pane {
-        background: #fff;
-      }
-    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
+
+    <link rel="stylesheet" href="http://webriqcms.netlify.com/assets/vendor.css">
+    <link rel="stylesheet" href="http://webriqcms.netlify.com/assets/cms.css">
+
+
+
+    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "production") + "\";"
 
     base(href="/admin/")
-  body
+  body.nav-md
 
 
 
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/posts').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       <!--Content-->
-    //-       <article class="box post">
-    //-         {{#if entry.banner }}
-    //-         {{cms-preview field='banner'}}
-    //-         {{/if}}
-    //-         <header>
-    //-           <h2>{{ entry.title }}</h2>
-    //-           <p>{{ entry.shortdesc}}</p>
-    //-         </header>
-    //-         {{cms-preview field='body'}}
-    //-       </article>
-    //-     </div>
-    //-   </div>
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/menuheader').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |menuhead| }}
-    //-         <section class="box">
-
-    //-           {{cms-preview field="html" from=menuhead}}
-
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/slidertexts').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |slidertext| }}
-    //-         <section class="box">
-    //-           <h1>{{slidertext.text}}</h1>
-    //-           <p>{{slidertext.description}}</p>
-    //-           {{cms-preview field="anchorlink" from=slidertext}}
-
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/sliders').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |slider| }}
-    //-         <section class="box">
-    //-           <span class="image featured">{{cms-preview field="image" from=slider}}</span>
-    //-           <p>{{slider.imagename}}</p>
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/getstarteds').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |getstarted| }}
-    //-         <section class="box">
-    //-           <h2>{{getstarted.title}}</h2>
-    //-           <p>{{getstarted.description}}</p>
-    //-           {{cms-preview field="anchorlink" from=getstarted}}
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/offers').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |offer| }}
-    //-         <section class="box">
-    //-           <span class="image featured">{{cms-preview field="image" from=offer}}</span>
-    //-           <header>
-    //-             <h3>{{offer.name}}</h3>
-    //-           </header>
-    //-           <p>{{offer.description}}</p>
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/statusbars').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |statusbar| }}
-    //-         <section class="box">
-
-    //-           {{cms-preview field="html" from=statusbar}}
-
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/ourteams').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |ourteam| }}
-    //-         <section class="box">
-    //-           <span class="image featured">{{cms-preview field="image" from=ourteam}}</span>
-    //-           <header>
-    //-             <h3>{{ourteam.name}}</h3>
-    //-           </header>
-    //-           <p>{{ourteam.role}}</p>
-    //-           <p>{{ourteam.description}}</p>
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    //- script(type="text/x-handlebars" data-template-name='cms/preview/prices').
-    //-   <div id="main-wrapper">
-    //-     <div class="container">
-    //-       {{#cms-preview field="data" as |price| }}
-    //-         <section class="box">
-    //-           <header>
-    //-             <h3>{{price.name}}</h3>
-    //-           </header>
-    //-           <p>{{price.description}}</p>
-    //-           {{cms-preview field="cols1" from=price}}
-    //-           <br/>
-    //-           {{cms-preview field="cols2" from=price}}
-    //-           <br/>
-    //-           {{cms-preview field="cols3" from=price}}
-
-
-    //-         </section>
-    //-       {{/cms-preview}}
-    //-     </div>
-    //-   </div>
-
-    script(type="text/x-handlebars" data-template-name='cms/preview/category').
+    script(type="text/x-handlebars" data-template-name='cms/preview/pages').
       <div id="main-wrapper">
         <div class="container">
-          {{#cms-preview field="data" as |categories| }}
-            <section class="box">
-              <select id="Test" name="Test">
-                  <option value="">-- Choose Test --</option>
-                  {{#each values}}
-                      <option {{bindAttr value="id" selected="selected"}}>{{categories.name}}</option>
-                  {{/each}}
-                </select>
-            </section>
+          <!--Content-->
+          <article class="box post">
+            {{#if entry.banner }}
+            {{cms-preview field='banner'}}
+            {{/if}}
+            <header>
+              <h2>{{ entry.title }}</h2>
+            </header>
+            {{cms-preview field='body'}}
+          </article>
+        </div>
+      </div>
+
+    script(type="text/x-handlebars" data-template-name='cms/preview/result').
+          <div id="main-wrapper">
+          <div class="container">
+          <h1>Menu Items</h1>
+          <hr>
+          <ul class="menu-preview">
+          {{#cms-preview field="result" as |results| }}
+            <li><a href="{{results.url}}">{{results.item}}</a></li>
+          {{/cms-preview}}
+          </ul>
+          </div>
+          </div>
+
+
+    script(type="text/x-handlebars" data-template-name='cms/preview/sitedata').
+      <div id="main-wrapper">
+        <div class="container">
+            <h1>Website Information</h1>
+            <hr>
+          {{#cms-preview field="sitedata" as |sitedatas| }}
+            <h4>Favicon</h4>
+            <p>{{{cms-preview field="icon" from=sitedatas}}}</p>
+            <h4>Logo</h4>
+            <p>{{cms-preview field="logo" from=sitedatas}}</p>
+            <h4>Website Name</h4>
+            <p>{{sitedatas.sitename}}</p>
+            <h4>Meta Description</h4>
+            <p>{{sitedatas.sitename}}</p>
+            <h4>Meta Author</h4>
+            <p>{{sitedatas.metauthor}}</p>
+            <h4>Meta Keywords</h4>
+            <p>{{sitedatas.metakeyword}}</p>
+            <h4>Copyright Text</h4>
+            <p>{{sitedatas.footer}}</p>
+
           {{/cms-preview}}
         </div>
       </div>
-    //- script(src="/js/vendor.js")
-    script(src="//cms.netlify.com/assets/vendor.js")
-    script(src="//cms.netlify.com/assets/cms.js")
-    script(src="/js/custom-admin.js")
+
+
+
+
+    script(src="http://webriqcms.netlify.com/assets/vendor.js")
+    script(src="http://webriqcms.netlify.com/assets/cms.js")
+    //- script(src="/js/custom-admin.js")
+

@@ -22,19 +22,11 @@ module.exports =
 
   extensions: [
     records(
-      offers: { file: "data/offers.json" }
-      ourteams: { file: "data/ourteams.json" }
-      prices: { file: "data/prices.json" }
-      contact: { file: "data/contact.json" }
-      getstarted: { file: "data/getstarted.json" }
       menu: { file: "data/menu.json" }
       site: { file: "data/site.json" }
-      slider: { file: "data/slider.json" }
-      slidertext: { file: "data/slidertext.json" }
-      statusbar: { file: "data/statusbar.json" }
-      category: { file: "data/category.json" }
     ),
     collections(folder: 'posts', layout: 'post'),
+    collections(folder: 'page', layout: 'post'),
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.styl')
   ]

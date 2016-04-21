@@ -11,14 +11,19 @@
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
-	.ember-view .cms.cms-list-controls .cms.cms-new-link{
+/*	.ember-view .cms.cms-list-controls .cms.cms-new-link{
 		display:none;
 	}
-
+*/
 	body
 	{
 		background: #252122;
 		/* background-image: url('images/bg02.png'); */
+	}
+
+	body.ember-application .cms-text{
+	  font: 16px/1.75em 'Open sans', Arial, Sans serif;
+	  font-weight: 400;
 	}
 
 		body.is-loading * {
@@ -36,7 +41,7 @@
 
 	body,input,textarea,select
 	{
-		font-family: 'Source Sans Pro';
+		font-family: 'Open sans';
 		font-weight: 300;
 		color: #5d5d5d;
 	}
