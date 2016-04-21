@@ -9,27 +9,26 @@ html
     link(rel="icon", href= records.site.sitedata[0].icon, type="image/*")
     link(rel="shortcut icon", href= records.site.sitedata[0].icon, type="img/*")
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <link href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css" rel="stylesheet">
+    link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
+    link(rel="stylesheet", href="/css/skel.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/style-desktop.css")
+    link(rel="stylesheet", href="/css/webriq-template.css")
 
 
-
-    <link rel="stylesheet" href="http://webriqcms.netlify.com/assets/vendor.css">
-    <link rel="stylesheet" href="http://webriqcms.netlify.com/assets/cms.css">
-
-
-
-    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "production") + "\";"
+    style.
+      .container {
+        width: auto;
+        max-width: 1200px;
+      }
+      body.ember-application .cms-list-entry,
+      body.ember-application .cms-preview-pane {
+        background: #fff;
+      }
+    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
 
     base(href="/admin/")
-  body.nav-md
+  body
 
 
 
@@ -91,7 +90,6 @@ html
 
 
 
-    script(src="http://webriqcms.netlify.com/assets/vendor.js")
-    script(src="http://webriqcms.netlify.com/assets/cms.js")
-    //- script(src="/js/custom-admin.js")
-
+    script(src="//cms.netlify.com/assets/vendor.js")
+    script(src="//cms.netlify.com/assets/cms.js")
+    script(src="/js/custom-admin.js")
