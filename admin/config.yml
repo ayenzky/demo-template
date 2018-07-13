@@ -44,20 +44,22 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Keywords", name: "metakeyword", widget: "string"}
               - {label: "Footer", name: "footer", widget: "markdown"}
               - {label: "Google Analytics", name: "analytics", widget: "markdown"}
-  - name: "menus"
-    label: "Menu"
+  - name: "offers"
+    label: "Offers"
     files:
-      - name: "result"
-        label: "Menu"
-        file: "data/menu.json"
+      - name: "pages"
+        label: "Offers"
+        file: "data/offers.json"
         description: "edit/add menu items"
         fields:
-          - label: "Menu Item"
-            name: "result"
+          - label: "Events"
+            name: "pages"
             widget: "list"
             fields:
-              - {label: "Item", name: "item", widget: "string"}
-              - {label: "Url ex.(/page/slug)", name: "url", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Instructor Name", name: "instructor_name", widget: "string"}
+              - {label: "Date", name: "date", widget: "date"}
+              - {label: "ExpiryDate", name: "dateexpiry", widget: "date"}
   - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page"  # Used in the UI, ie.: "New Post"
     folder: "page" # The path to the folder where the documents are stored
